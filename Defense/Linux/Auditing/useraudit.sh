@@ -2,6 +2,7 @@
 
 # Define the log file
 LOG_FILE="user_audit.log"
+ORIGINAL_LOG_FILE="/path/to/user_audit.log.original"
 
 # Clear the log file if it exists
 > "$LOG_FILE"
@@ -51,5 +52,4 @@ while IFS=: read -r username _ uid gid _ home shell; do
 done < /etc/passwd
 
 echo "User audit log has been created at $LOG_FILE"
-
 
