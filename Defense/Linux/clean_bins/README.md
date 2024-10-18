@@ -1,0 +1,1 @@
+These were select bins found in /bin/ there were easily recompiled, were shell scripts, or python scripts. These were built/maintained by other people.
