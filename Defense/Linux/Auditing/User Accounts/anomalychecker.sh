@@ -17,6 +17,7 @@ if [ -e "$PREV_LOG_FILE" ]; then
             echo "Anomaly detected in user audit log:"
             diff -C 5 "$PREV_LOG_FILE" "$LOG_FILE"
         } | mail -s "User Audit Alert" XXXXXXXXXXXXXXXXX
+        echo "Anomaly detected. Check mail."
     fi
 else
     # First run, set up the baseline log file

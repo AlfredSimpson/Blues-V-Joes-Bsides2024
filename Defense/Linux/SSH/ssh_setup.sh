@@ -2,6 +2,9 @@
 
 <<~~###############################################################################
 
+NOT CURRENTLY WORKING - Checking for pre-existing keys fails.
+
+
 This script scans the system for pre-existing SSH keys and then stands up SSH on a server, creates a user, and adds SSH keys to the user's authorized_keys file. It then prompts for a password for the user.
 
 ~~###############################################################################
@@ -20,7 +23,8 @@ KEY_LOG="/tmp/ssh_key_check.log"
 > $KEY_LOG
 
 # Find SSH public keys (.pub or files containing ssh-rsa/ecdsa/ed25519 keys)
-find / -type f -exec grep -EH "ssh-(rsa|dss|ecdsa|ed25519)" {} \; >> $KEY_LOG 2>/dev/null
+# find / -type f -exec grep -EH "ssh-(rsa|dss|ecdsa|ed25519)" {} \; >> $KEY_LOG 2>/dev/null
+# Does not work as intended yet. Need to refine the search.
 
 echo "Finished scanning. SSH key search results stored in $KEY_LOG."
 
