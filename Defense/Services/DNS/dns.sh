@@ -67,7 +67,7 @@ mkdir -p /etc/bind/zones
 cat <<EOF > /etc/bind/zones/db.$DOMAIN
 \$TTL 604800
 @   IN  SOA $NS1. admin.$DOMAIN. (
-            2         ; Serial
+            2      ; Serial
         604800     ; Refresh
          86400     ; Retry
        2419200     ; Expire
